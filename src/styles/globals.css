@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* WatchList Custom Design Tokens */
+  --watchlist-purple-50: #faf7ff;
+  --watchlist-purple-100: #f0e6ff;
+  --watchlist-purple-200: #e0ccff;
+  --watchlist-purple-300: #c999ff;
+  --watchlist-purple-400: #a855f7;
+  --watchlist-purple-500: #8b5cf6;
+  --watchlist-purple-600: #7c3aed;
+  --watchlist-purple-700: #6d28d9;
+  --watchlist-purple-800: #5b21b6;
+  --watchlist-purple-900: #4c1d95;
+  
+  --watchlist-blue-50: #eff6ff;
+  --watchlist-blue-100: #dbeafe;
+  --watchlist-blue-200: #bfdbfe;
+  --watchlist-blue-300: #93c5fd;
+  --watchlist-blue-400: #60a5fa;
+  --watchlist-blue-500: #3b82f6;
+  --watchlist-blue-600: #2563eb;
+  --watchlist-blue-700: #1d4ed8;
+  --watchlist-blue-800: #1e40af;
+  --watchlist-blue-900: #1e3a8a;
+  
+  /* 3D Effect Shadows */
+  --shadow-3d-sm: 0 2px 4px rgba(139, 92, 246, 0.1), 0 4px 8px rgba(59, 130, 246, 0.05);
+  --shadow-3d: 0 4px 6px rgba(139, 92, 246, 0.15), 0 8px 16px rgba(59, 130, 246, 0.1);
+  --shadow-3d-lg: 0 8px 16px rgba(139, 92, 246, 0.2), 0 16px 32px rgba(59, 130, 246, 0.15);
+  --shadow-3d-xl: 0 16px 32px rgba(139, 92, 246, 0.25), 0 32px 64px rgba(59, 130, 246, 0.2);
+  
+  /* Animation Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  
+  /* Mobile-specific spacing */
+  --mobile-padding: 1rem;
+  --mobile-margin: 0.75rem;
+  --mobile-gap: 0.5rem;
+  
+  /* Card styling */
+  --card-radius: 1rem;
+  --card-padding: 1rem;
+  --card-shadow: var(--shadow-3d);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+  
+  /* Dark mode WatchList tokens */
+  --watchlist-purple-50: #1e1b26;
+  --watchlist-purple-100: #2a2435;
+  --watchlist-purple-200: #3d3349;
+  --watchlist-purple-300: #524463;
+  --watchlist-purple-400: #6d5a7e;
+  --watchlist-purple-500: #8b72a0;
+  --watchlist-purple-600: #a790c4;
+  --watchlist-purple-700: #c5b4e8;
+  --watchlist-purple-800: #ddd1f0;
+  --watchlist-purple-900: #f0e6ff;
+  
+  --shadow-3d-sm: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-3d: 0 4px 6px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.3);
+  --shadow-3d-lg: 0 8px 16px rgba(0, 0, 0, 0.5), 0 16px 32px rgba(0, 0, 0, 0.4);
+  --shadow-3d-xl: 0 16px 32px rgba(0, 0, 0, 0.6), 0 32px 64px rgba(0, 0, 0, 0.5);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* WatchList Custom Colors
+  --color-watchlist-purple-50: var(--watchlist-purple-50);
+  --color-watchlist-purple-100: var(--watchlist-purple-100);
+  --color-watchlist-purple-200: var(--watchlist-purple-200);
+  --color-watchlist-purple-300: var(--watchlist-purple-300);
+  --color-watchlist-purple-400: var(--watchlist-purple-400);
+  --color-watchlist-purple-500: var(--watchlist-purple-500);
+  --color-watchlist-purple-600: var(--watchlist-purple-600);
+  --color-watchlist-purple-700: var(--watchlist-purple-700);
+  --color-watchlist-purple-800: var(--watchlist-purple-800);
+  --color-watchlist-purple-900: var(--watchlist-purple-900);
+  
+  --color-watchlist-blue-50: var(--watchlist-blue-50);
+  --color-watchlist-blue-100: var(--watchlist-blue-100);
+  --color-watchlist-blue-200: var(--watchlist-blue-200);
+  --color-watchlist-blue-300: var(--watchlist-blue-300);
+  --color-watchlist-blue-400: var(--watchlist-blue-400);
+  --color-watchlist-blue-500: var(--watchlist-blue-500);
+  --color-watchlist-blue-600: var(--watchlist-blue-600);
+  --color-watchlist-blue-700: var(--watchlist-blue-700);
+  --color-watchlist-blue-800: var(--watchlist-blue-800);
+  --color-watchlist-blue-900: var(--watchlist-blue-900);
+
+  */
+}
+
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Very small, styled scrollbar for prototyping */
+.scroll-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 255, 0.4); /* light bluish purple */
+  border-radius: 8px;
+}
